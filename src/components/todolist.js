@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import TodoItems from './todoItems'
 import './../css/components/todolist.css';
 
 function ToDoList(props) {
 
-    /**/
-    const [myItems, setItems] = useState([]);
+    const [myItems, setItems] = useState([{text: "bloublou", key: Date.now()}]);
     const [task, setTask] = useState('');
 
     const addItem = (e) => {
+        e.preventDefault();
         let newItem = {
             text: task,
             key: Date.now()
         };
 
-        e.preventDefault();
         if(task){
             setItems(myItems.concat(newItem));
             setTask('');
@@ -25,14 +23,17 @@ function ToDoList(props) {
 
     return (
         <div className="todolist">
-            <div className="header">
+
                 <form onSubmit={addItem}>
-                    <input placeholder="enter task" onChange={event => setTask(event.target.value)} value={task}>
+                    <input placeholder="enter task" 
+                    onChange={event => setTask(event.target.value)} 
+                    value={task}
+                    >
                     </input>
-                    <Button type="submit" className="btn-primary">add</Button>
+                    <button type="submit" className="button">add</button>
                 </form>
-            </div>
-            <TodoItems items={myItems}/>
+
+            <TodoItems items={myItems} setItems={setItems}/>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  background-color: rgb(77, 110, 126);
+  background-color: rgb(77, 110, 126) !important;
   font-family: sans-serif;
 }
 

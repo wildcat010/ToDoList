@@ -1,0 +1,48 @@
+.myitems, .myitems_delete, .myitems_done {
+    color: #333;
+    background-color: rgba(255,255,255,.5);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color .2s ease-out;
+}
+
+.myitems {
+    &:hover {
+        background-color: #FF8C00;
+        cursor: pointer;
+    }
+
+}
+
+.myitems_delete {
+    &:hover {
+        background-color: #A52A2A;
+        color: #fefefe;
+        cursor: pointer;
+    }
+}
+
+.myitems_done {
+    &:hover {
+        background-color: #004D00;
+        color: #fefefe;
+        cursor: pointer;
+    }
+}
+
+.actions {
+    float: right;
+    margin-right: 10px;
+
+    &:first-child {
+        margin-right: 0px;
+    }
+}
+
+.deleteImg, .checkImg {
+    width: 16px; 
+    height: 25px;
+    display: block;
+    float: right;
+}
