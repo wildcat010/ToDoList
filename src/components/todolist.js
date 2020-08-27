@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import TodoItems from './todoItems'
+import TodoItems from './todoItems';
+import ItemsFinished from './itemsfinished';
 import './../css/components/todolist.css';
 
 function ToDoList(props) {
 
     const [myItems, setItems] = useState([{text: "bloublou", key: Date.now()}]);
+    const [myItemsDone, setItemsDone] = useState([{text: "task finished", key: Date.now()}]);
     const [task, setTask] = useState('');
 
     const addItem = (e) => {
@@ -34,6 +36,7 @@ function ToDoList(props) {
                 </form>
 
             <TodoItems items={myItems} setItems={setItems}/>
+            <ItemsFinished items={myItemsDone} setItemsDone={setItemsDone}/>
         </div>
     );
 }

@@ -41,6 +41,8 @@ function MyItems(props) {
         <>
         {props.items.map(i => 
             <li key={i.key} className={itemClasseName}>{i.text}
+
+                
                 <span type="submit" className="actions" 
                 onClick={()=> props.onDelete(i.key)} 
                 onMouseEnter={ () => hoverList('delete')} 
@@ -56,7 +58,9 @@ function MyItems(props) {
                 >
                     <img className="checkImg" src={imageCheck} alt="task finished"></img>               
                 </span>
-            </li>)}
+                
+            </li>)
+        }
         </>
     );
 
