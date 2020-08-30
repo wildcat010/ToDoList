@@ -28,7 +28,9 @@ function ToDoItems(props) {
             </div>
             <span className="line"></span>
             <ul className="theList">
+                
                 <MyItems items={props.items} onDelete={deleteItem} onCheck={deleteItem} onChange={changeStatus}></MyItems>
+                
             </ul>
         </div>
     );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import imageCheck from './../assets/check.svg'
-import imageDelete from './../assets/bin.svg'
+import imageCheck from './../assets/check.svg';
+import FlipMove from 'react-flip-move';
+import imageDelete from './../assets/bin.svg';
 import './../css/components/myItems.scss';
 
 function MyItems(props) {
@@ -38,11 +39,11 @@ function MyItems(props) {
     }
 
     return (
-        <>
+        
+        <FlipMove>
         {props.items.map(i => 
             <li key={i.key} className={itemClasseName}>{i.text}
 
-                
                 <span type="submit" className="actions" 
                 onClick={()=> props.onDelete(i.key)} 
                 onMouseEnter={ () => hoverList('delete')} 
@@ -61,7 +62,8 @@ function MyItems(props) {
                 
             </li>)
         }
-        </>
+        </FlipMove>
+        
     );
 
 }
