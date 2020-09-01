@@ -1,4 +1,4 @@
-.myitems, .myitems_delete, .myitems_done {
+.myitems, .myitems_delete, .myitems_finished, .myitems_restart {
     color: #333;
     background-color: rgba(255,255,255,.5);
     padding: 15px;
@@ -23,9 +23,17 @@
     }
 }
 
-.myitems_done {
+.myitems_finished {
     &:hover {
         background-color: #8FBC8F;
+        color: #fefefe;
+        cursor: pointer;
+    }
+}
+
+.myitems_restart {
+    &:hover {
+        background-color: #89CFF0;
         color: #fefefe;
         cursor: pointer;
     }
@@ -40,7 +48,7 @@
     }
 }
 
-.deleteImg, .checkImg {
+.deleteImg, .checkImg, .imageReset {
     width: 16px; 
     height: 25px;
     display: block;

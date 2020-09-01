@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MyItems from './myItems';
 import './../css/components/itemsfinished.scss';
 
@@ -11,7 +11,7 @@ function ItemsFinished(props) {
             </div>
             <span className="lineDone"></span>
             <ul className="theListDone">
-                <MyItems items={props.items} finished={true}></MyItems>
+                <MyItems items={props.items} finished={true} onChange={props.onChange}></MyItems>
             </ul>
         </div>
     );
