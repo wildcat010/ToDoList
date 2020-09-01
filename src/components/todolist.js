@@ -44,7 +44,6 @@ function ToDoList(props) {
                     setItems(filteredItems);
                 break;
             case "restart":
-                debugger;
                     setItems(itemToUpdate[0].recurrence ++);
                     const newItem = {
                         text: `${itemToUpdate[0].text} (${itemToUpdate[0].recurrence})`,
