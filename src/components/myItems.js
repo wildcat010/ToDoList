@@ -2,6 +2,7 @@ import React from 'react';
 import Item from './Item';
 import './../css/components/myItems.scss';
 
+
 function MyItems(props) {
 
     return (
