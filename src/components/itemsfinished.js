@@ -4,6 +4,7 @@ import './../css/components/itemsfinished.scss';
 
 function ItemsFinished(props) {
 
+
     return (
         <div className="itemsFinished">
            <div className="displayItemsDone">

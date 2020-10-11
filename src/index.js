@@ -3,13 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import configureStore from "./redux/configureStore";
+import {Provider as ReduxProvider} from 'react-redux';
+
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('container'));
+const store = configureStore();
+
+ReactDOM.render(
+
+<ReduxProvider store={store}>
+  <React.StrictMode><BrowserRouter>
+    <App /></BrowserRouter>
+</React.StrictMode>
+</ReduxProvider>
+
+, document.getElementById('container'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

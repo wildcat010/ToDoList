@@ -8,7 +8,7 @@ function MyItems(props) {
     return (
         // <FlipMove>
         <>
-        {props.items.map(i => <Item key={i.key} onChange={props.onChange} items={i} finished={props.finished}></Item>)}
+        {props.items.map((i) => (<Item key={i.key} onChange={props.onChange} items={i} finished={props.finished}></Item>))}
         </>
         // </FlipMove>
     );
